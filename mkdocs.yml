@@ -1,4 +1,13 @@
 site_name: ValidationHelper
+repo_url: https://github.com/yamagh/validationhelper
+theme:
+  name: material
+  palette:
+    primary: white
+    accent: pink
+  logo: img/icon.svg
+  icon:
+    repo: fontawesome/brands/git-alt
 nav:
   - Top: index.md
   - Tutorial: Tutorial.md
