@@ -1,0 +1,5 @@
+site_name: ValidationHelper
+nav:
+  - Top: index.md
+  - Tutorial: Tutorial.md
+  - Reference: Reference.md
