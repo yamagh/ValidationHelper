@@ -8,8 +8,8 @@ theme:
   logo: img/icon.svg
   icon:
     repo: fontawesome/brands/git-alt
-gtag:
-  - G-0BSW43D88H
+  gtag:
+    - G-0BSW43D88H
 nav:
   - Top: index.md
   - Tutorial: Tutorial.md
