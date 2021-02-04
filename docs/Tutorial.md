@@ -56,7 +56,7 @@ Open the details screen of "Micropost" and enter 141 characters in "Content". No
 
 ![](img/README/6.png)
 
-When I clicked the "Save" button, verification was performed and an error occurred.
+When I clicked the "Save" button, verification was performed and two errors occurred.
 
 ![](img/README/7.png)
 
