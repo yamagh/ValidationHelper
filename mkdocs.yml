@@ -16,3 +16,4 @@ theme:
 markdown_extensions:
   - def_list
   - admonition
+  - attr_list
