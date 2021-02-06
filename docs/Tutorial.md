@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Tutorial
 
 There are two things to do.

@@ -13,7 +13,11 @@ theme:
     - G-0BSW43D88H
   features:
     - navigation.instant
+    - navigation.tabs
+    - header.autohide
 markdown_extensions:
   - def_list
   - admonition
   - attr_list
+  - toc:
+      permalink: true
