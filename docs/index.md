@@ -4,7 +4,9 @@ title: Home
 
 # ValidationHelper
 
-<img src='img/icon.svg' width='250'/>
+<figure>
+  <img src='img/icon.svg' width='250'/>
+</figure>
 
 ## What does this component do?
 
