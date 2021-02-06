@@ -11,7 +11,8 @@ theme:
   custom_dir: overrides
   gtags:
     - G-0BSW43D88H
-nav:
-  - Top: index.md
-  - Tutorial: Tutorial.md
-  - Reference: Reference.md
+  features:
+    - navigation.instant
+markdown_extensions:
+  - def_list
+  - admonition

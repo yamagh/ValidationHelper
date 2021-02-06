@@ -1,3 +1,7 @@
+---
+title: Home
+---
+
 # ValidationHelper
 
 <img src='img/icon.svg' width='250'/>
