@@ -13,11 +13,10 @@ theme:
     - G-0BSW43D88H
   features:
     - navigation.instant
-    - navigation.sections
     - navigation.tabs
-    - navigation.tabs.sticky
-    - header.autohide
-    - navigation.indexes
+    - navigation.sections
+    - navigation.expand
+    # - header.autohide
     # - toc.integrate
 markdown_extensions:
   - def_list
