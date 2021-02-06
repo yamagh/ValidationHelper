@@ -5,7 +5,7 @@ Verify the length of the text.
 ## Parameters
 
 `LengthTypeId`
-:   min / max
+:   Specify `min` / `max`
 
 `Number`
 :   Threshold used for verification

@@ -5,7 +5,7 @@ Verify numericality.
 ## Parameters
 
 `NumecarityTypeId`
-:   odd / even / equal_to / less_than / less_than_or_equal_to / greater_than / greater_than_or_equal_to
+:   Specify `odd` / `even` / `equal_to` / `less_than` / `less_than_or_equal_to` / `greater_than` / `greater_than_or_equal_to`
 
 `Number`
 :   Threshold used for verification

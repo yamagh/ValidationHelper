@@ -5,7 +5,7 @@ Verify the elements contained in the text.
 ## Parameters
 
 `ElementTypeId`
-:   inclustion / exclusion
+: Specify `inclustion` / `exclusion`
 
 `List`
 :   List of words used for verification

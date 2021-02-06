@@ -5,7 +5,7 @@ Verify the existence of the value.
 ## Parameters
 
 `ExistenceTypeId`
-: presence / absence
+: Specify `presence` / `absence`
 
 `Message`
 : Custom error message
