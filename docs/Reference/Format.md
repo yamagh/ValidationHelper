@@ -6,7 +6,7 @@ Use OutSystems' [Text API/Regex_Search](https://success.outsystems.com/Documenta
 ## Parameters
 
 `FormatTypeId`
-:   Specify `odd` / `even` / `equal_to` / `less_than` / `less_than_or_equal_to` / `greater_than` / `greater_than_or_equal_to`
+:   Specify `with` / `without`g
 
 `Pattern`
 :   Regular expression pattern used in validation
