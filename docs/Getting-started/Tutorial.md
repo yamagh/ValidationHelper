@@ -24,7 +24,7 @@ Now let's get started.
 
 ## 1. Define validation rules in this app
 
-Open the validation rules page in this app (https://<YOUR_SERVER>/ValidationHelper/).
+Open the validation rules page in this app (https://<YOUR_SERVER\>/ValidationHelper/).
 The page of `Micropost` is as follows.
 You will see the attributes in `Micropost` and you will see a link to add validation.
 

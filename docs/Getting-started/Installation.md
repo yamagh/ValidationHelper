@@ -12,7 +12,7 @@ First of all, start ServiceStudio. Then open `Forge` from the tabs on the top le
 
 ![](../img/Getting-started/1.png){: loading=lazy }
 
-When you open the details page of `ValidationHelper`, you should see an" Install "button. Let's click.
+When you open the details page of `ValidationHelper`, you should see an "INSTALL" button. Let's click.
 
 ![](../img/Getting-started/2.png){: loading=lazy }
 
@@ -20,10 +20,13 @@ You may have to wait a few seconds to check for dependencies.
 
 ![](../img/Getting-started/3.png){: loading=lazy }
 
-Click "Install" again and you're done.
+Click "INSTALL" again and you're done.
 
 ![](../img/Getting-started/4.png){: loading=lazy }
 
 If a warning appears on the screen, please read the notice carefully and deal with it.
 
 ![](../img/Getting-started/5.png){: loading=lazy }
+
+!!! info
+    If you are interested in the development version, please refer to the [project repository](https://github.com/yamagh/ValidationHelper/tree/main/oap).
