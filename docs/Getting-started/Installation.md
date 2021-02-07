@@ -24,9 +24,10 @@ Click "INSTALL" again and you're done.
 
 ![](../img/Getting-started/4.png){: loading=lazy }
 
-If a warning appears on the screen, please read the notice carefully and deal with it.
+!!! warning
+    If a warning appears on the screen, please read the notice carefully and deal with it.
 
-![](../img/Getting-started/5.png){: loading=lazy }
+    ![](../img/Getting-started/5.png){: loading=lazy }
 
 !!! info
     If you are interested in the development version, please refer to the [project repository](https://github.com/yamagh/ValidationHelper/tree/main/oap).
