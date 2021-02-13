@@ -30,7 +30,7 @@ nav:
   - Home: index.md
   - Getting started:
     - Installation: Getting-started/Installation.md
-    - Tutorial: Getting-started/Installation.md
+    - Tutorial: Getting-started/Tutorial.md
   - Reference:
     - Validation Types: Reference/index.md
     - Element: Reference/Element.md
