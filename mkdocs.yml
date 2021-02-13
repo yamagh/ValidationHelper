@@ -24,3 +24,20 @@ markdown_extensions:
   - attr_list
   - toc:
       permalink: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+nav:
+  - Home: index.md
+  - Getting started:
+    - Installation: Getting-started/Installation.md
+    - Tutorial: Getting-started/Installation.md
+  - Reference:
+    - Validation Types: Reference/index.md
+    - Element: Reference/Element.md
+    - Existence: Reference/Existence.md
+    - Format: Reference/Format.md
+    - Length: Reference/Length.md
+    - Numecarity: Reference/Numecarity.md
+  - Reading material:
+    - Why need this: Reading-material/why-need-this.md
+  - Contribution: Contribution/contribution.md
