@@ -7,6 +7,7 @@ You can define validation rules from the following types of validation methods:
 - **Format:** With, Without
 - **Length:** Min, Max
 - **Numecarity:** Odd, Even, Equal to, Less than, Less thaan or equal to, Greater than, Greater than or equal to
+- **Uniqueness**
 
 You can define all types of validation for attributes of all data types. When validating, the data is implicitly transformed and then validated, depending on the type of validation.
 

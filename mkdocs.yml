@@ -12,7 +12,7 @@ theme:
   gtags:
     - G-0BSW43D88H
   features:
-    - navigation.instant
+    # - navigation.instant
     - navigation.tabs
     - navigation.sections
     - navigation.expand
@@ -38,6 +38,7 @@ nav:
     - Format: Reference/Format.md
     - Length: Reference/Length.md
     - Numecarity: Reference/Numecarity.md
+    - Uniqueness: Reference/Uniqueness.md
   - Reading material:
     - Why need this: Reading-material/why-need-this.md
   - Contribution: Contribution/contribution.md
