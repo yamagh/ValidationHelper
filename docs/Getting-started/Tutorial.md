@@ -92,6 +92,6 @@ It has been verified as expected.
 ---
 
 That's all for the tutorial.  
-There are other types of validation available with "ValidationHelper" besides those used in this tutorial. See Referrals for more information. 
+There are other types of validation available with "ValidationHelper" besides those used in this tutorial. See [Reference](/Reference) for more information.
 
 I hope this solution helps you. Thank you 👍
