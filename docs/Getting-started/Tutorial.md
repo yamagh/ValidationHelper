@@ -30,7 +30,7 @@ Now let's get started.
 ## 1. Define validation rules in this app
 
 First of all, open the ValidationHelper app (https://<YOUR_SERVER\>/ValidationHelper/).  
-The first screen that appears is to search for the entity for which you want to define a validation rule.
+Then, the entity search screen is displayed, so search for the entity for which you want to set validation rules.
 
 This time I want to define a validation rule for the "Micropost" entity, so search for "Micropost".
 
