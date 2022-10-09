@@ -1,0 +1,92 @@
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="250" y1="0" x2="250" y2="500" id="gradient-3" gradientTransform="matrix(-1, 0.000532, -0.000473, -0.886449, 390.556657, 471.20726)">
+      <stop offset="0" style="stop-color: rgb(245, 88, 123);"></stop>
+      <stop offset="1" style="stop-color: rgb(255, 138, 92);"></stop>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="250" y1="30" x2="250" y2="469.495" id="gradient-2" gradientTransform="matrix(-0.000469, -0.999999, 0.012379, -0.000006, 246.88826, 279.875275)">
+      <stop offset="0" style="stop-color: rgb(255, 255, 255);"></stop>
+      <stop offset="1" style="stop-color: rgb(248, 248, 248);"></stop>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="250" y1="30" x2="250" y2="469.495" id="gradient-4" gradientTransform="matrix(0.004063, -0.999991, 0.016693, 0.000068, 244.271545, 454.937347)">
+      <stop offset="0" style="stop-color: rgba(255, 255, 255, 1)"></stop>
+      <stop offset="1" style="stop-color: rgb(248, 248, 248);"></stop>
+    </linearGradient>
+    <filter id="drop-shadow-filter-1" x="-500%" y="-500%" width="1000%" height="1000%" bx:preset="drop-shadow 1 10 10 26 0.25 rgba(0,0,0,0.3)">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="26"></feGaussianBlur>
+      <feOffset dx="10" dy="10"></feOffset>
+      <feComponentTransfer result="offsetblur">
+        <feFuncA id="spread-ctrl" type="linear" slope="0.5"></feFuncA>
+      </feComponentTransfer>
+      <feFlood flood-color="rgba(0,0,0,0.3)"></feFlood>
+      <feComposite in2="offsetblur" operator="in"></feComposite>
+      <feMerge>
+        <feMergeNode></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+    <linearGradient id="gradient-5" bx:pinned="true">
+      <stop style="stop-color: rgb(245, 88, 123);" offset="0"></stop>
+      <stop style="stop-color: rgb(255, 138, 92);" offset="1"></stop>
+    </linearGradient>
+    <linearGradient id="gradient-5-0" gradientUnits="userSpaceOnUse" x1="250" y1="22.916" x2="250" y2="477.084" gradientTransform="matrix(1, 0, 0, 1, -500, -500)" xlink:href="#gradient-5"></linearGradient>
+    <linearGradient id="gradient-5-1" gradientUnits="userSpaceOnUse" x1="250" y1="0" x2="250" y2="500" gradientTransform="matrix(1, 0.000001, -0.000001, 1, 0.000112, -0.000048)" xlink:href="#gradient-5"></linearGradient>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0.000279)" style="">
+    <title>Main</title>
+    <rect width="500" height="500" style="visibility: hidden;">
+      <title>Black</title>
+    </rect>
+    <rect stroke-width="1.5" id="svg_1" style="fill: url(#gradient-3); visibility: hidden;" x="0" y="0" width="500" height="500" rx="250" ry="250">
+      <title>BackGround</title>
+    </rect>
+    <path d="M 0 250 C 0 346.225 52.083 424.408 125 466.506 C 197.916 508.605 291.667 514.619 375 466.506 C 413.675 444.177 444.925 412.379 466.506 375 C 488.088 337.62 500 294.658 500 250 C 500 153.775 447.917 75.592 375 33.494 C 302.083 -8.604 208.334 -14.618 125 33.494 C 86.325 55.823 55.075 87.62 33.494 125 C 11.912 162.38 0 205.342 0 250 Z M 267.538 173.156 C 267.538 173.156 268.824 171.756 271.161 170.073 C 273.497 168.39 276.165 167.014 278.326 166.224 C 278.326 166.224 281.021 165.103 284.925 164.589 C 284.925 164.589 289.314 163.919 293.76 164.729 C 293.76 164.729 297.794 165.323 301.622 167.171 C 301.622 167.171 305.718 168.942 309.488 172.516 L 338.596 201.758 L 366.695 230.216 C 370.411 234.321 372.081 238.594 372.081 238.594 C 374.026 242.993 374.34 247.304 374.34 247.304 C 375.134 254.377 372.937 259.968 372.937 259.968 C 370.555 267.082 365.822 271.527 365.822 271.527 C 365.822 271.527 360.5 277.441 351.728 279.533 C 351.728 279.533 343.779 281.97 334.761 278.791 C 334.761 278.791 328.893 277.127 323.565 271.919 L 288.723 237.002 L 233.17 292.818 L 177.616 348.633 C 168.634 357.201 157.772 356.776 157.772 356.776 C 143.927 357.217 135.737 347.956 135.737 347.956 C 135.737 347.956 128.56 341.607 127.19 330.46 C 127.19 330.46 124.873 317.145 135.032 306.369 C 154.791 285.41 188.464 252.636 216.514 224.44 C 244.564 196.244 267.538 173.156 267.538 173.156 Z" style="fill: url(#gradient-5-1);" transform="matrix(-1, 0.000001, -0.000001, -1, 500.000169, 499.999892)"></path>
+    <ellipse style="fill: none; stroke-width: 45px; stroke: url(#gradient-5-0); visibility: hidden;" cx="-250" cy="-250" rx="227.084" ry="227.084" transform="matrix(-1, 0, 0, -1, 0, 0)"></ellipse>
+  </g>
+  <g style="visibility: hidden;" transform="matrix(1, 0, 0, 1, 0, 0.000279)">
+    <title>Guide</title>
+    <line fill="none" stroke="#e5e5e5" stroke-width="1.5" fill-opacity="null" x1="0" y1="0" x2="500" y2="500" id="svg_2" stroke-linejoin="null" stroke-linecap="null" style=""></line>
+    <line fill="none" stroke="#e5e5e5" stroke-width="1.5" fill-opacity="null" x1="0" y1="500" x2="500" y2="0" id="svg_3" stroke-linejoin="null" stroke-linecap="null" style=""></line>
+    <line fill="none" stroke="#e5e5e5" stroke-width="1.5" fill-opacity="null" x1="30" y1="0" x2="30" y2="500" id="svg_4" stroke-linejoin="null" stroke-linecap="null" style=""></line>
+    <line fill="none" stroke="#e5e5e5" stroke-width="1.5" fill-opacity="null" x1="0" y1="30" x2="500" y2="30" id="svg_5" stroke-linejoin="null" stroke-linecap="null"></line>
+    <line fill="none" stroke="#e5e5e5" stroke-width="1.5" fill-opacity="null" x1="0" y1="470" x2="500" y2="470" id="svg_6" stroke-linejoin="null" stroke-linecap="null"></line>
+    <line fill="none" stroke="#e5e5e5" stroke-width="1.5" fill-opacity="null" x1="470" y1="0" x2="470" y2="500" id="svg_7" stroke-linejoin="null" stroke-linecap="null"></line>
+    <line fill="none" stroke="#e5e5e5" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" x1="250" y1="0" x2="250" y2="500" id="svg_9" stroke-linejoin="null" stroke-linecap="null"></line>
+    <line fill="none" stroke="#e5e5e5" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" x1="0" y1="250" x2="500" y2="250" id="svg_10" stroke-linejoin="null" stroke-linecap="null"></line>
+    <line fill="none" stroke="#e5e5e5" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" x1="0" y1="140" x2="500" y2="140" id="line-1" stroke-linejoin="null" stroke-linecap="null"></line>
+    <line fill="none" stroke="#e5e5e5" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" x1="-430.521" y1="360.264" x2="69.479" y2="360.264" id="line-2" stroke-linejoin="null" stroke-linecap="null" transform="matrix(1, 0, 0, 1, 430.521354, -0.264044)"></line>
+    <line fill="none" stroke="#e5e5e5" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" x1="-96.485" y1="-2.325" x2="-96.485" y2="497.675" id="line-3" stroke-linejoin="null" stroke-linecap="null" transform="matrix(1, 0, 0, 1, 236.485397, 2.324721)"></line>
+    <line fill="none" stroke="#e5e5e5" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" x1="360" y1="0" x2="360" y2="500" id="line-4" stroke-linejoin="null" stroke-linecap="null"></line>
+    <circle style="fill: none; stroke: rgb(229, 229, 229);" cx="250" cy="250" r="50"></circle>
+    <circle style="fill: none; stroke: rgb(229, 229, 229);" cx="-386.329" cy="298.697" r="110" transform="matrix(1, 0, 0, 1, 636.32926, -48.696651)"></circle>
+    <circle style="fill: none; stroke: rgb(229, 229, 229);" cx="-131.686" cy="295.11" r="155" transform="matrix(1, 0, 0, 1, 381.686408, -45.110132)"></circle>
+    <circle style="fill: none; stroke: rgb(229, 229, 229);" cx="-459.116" cy="317.964" r="220" transform="matrix(1, 0, 0, 1, 709.115569, -67.964059)"></circle>
+    <ellipse fill="none" stroke="#e5e5e5" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" cx="431" cy="431" id="svg_8" rx="100" ry="100"></ellipse>
+    <line fill="none" stroke="#e5e5e5" stroke-width="1.5" fill-opacity="null" x1="0" y1="85" x2="500" y2="85" id="line-5" stroke-linejoin="null" stroke-linecap="null"></line>
+    <line fill="none" stroke="#e5e5e5" stroke-width="1.5" fill-opacity="null" x1="0" y1="415" x2="500" y2="415" id="line-6" stroke-linejoin="null" stroke-linecap="null"></line>
+    <line fill="none" stroke="#e5e5e5" stroke-width="1.5" fill-opacity="null" x1="53.159" y1="167.115" x2="53.159" y2="667.115" id="line-7" stroke-linejoin="null" stroke-linecap="null" style="" transform="matrix(1, 0, 0, 1, 31.841417, -167.115011)"></line>
+    <line fill="none" stroke="#e5e5e5" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" x1="398.4" y1="57.769" x2="398.4" y2="557.769" id="line-8" stroke-linejoin="null" stroke-linecap="null" transform="matrix(1, 0, 0, 1, 16.599861, -57.768958)"></line>
+  </g>
+  <g style="" transform="matrix(1.240001, 0, 0, 1.240001, -60.000122, -60.060078)">
+    <title>Shield</title>
+    <g transform="matrix(0.806351, 0, 0, 0.806451, 48.411888, 48.451637)" bx:origin="0.499999 0.5">
+      <path d="M 95 111.441 C 173.057 89.466 250 40.98 250 40.98 C 250 40.98 327.5 90 405 111.441 C 405 120 405 250.058 405 250.058 C 406.024 329.765 366.819 380.776 326.642 414.149 C 287.322 447.38 260.69 455.775 251.126 458.944 C 241.471 455.728 214.335 447.092 174.439 413.712 C 133.709 380.202 93.989 329.169 95 250 C 95 250 95 120 95 111.441 Z" style="stroke-miterlimit: 37; stroke-linejoin: round; stroke-width: 10px; fill: url(#gradient-2); stroke: url(#gradient-4); filter: url(#drop-shadow-filter-1); visibility: hidden;"></path>
+      <path d="M 342.973 173.137 L 211.109 305.598 L 155.461 249.526 L 211.315 305.469 L 342.973 173.137 Z" style="fill: rgb(115, 201, 174); stroke: rgb(115, 201, 174); stroke-linejoin: round; stroke-width: 60.0037px; visibility: hidden;"></path>
+      <path d="M 343.001 173.18 L 211.137 305.641 L 155.489 249.569 L 211.343 305.512 L 343.001 173.18 Z" style="fill: rgb(115, 201, 174); stroke-linejoin: round; stroke-width: 60.0037px; stroke: rgb(255, 255, 255); visibility: hidden;"></path>
+      <path d="M 325.498 209.809 L 325.498 291.487 L 174.073 291.487 L 174.073 209.809 L 325.498 209.809 Z M 175.073 290.487 L 324.498 290.487 L 324.498 210.809 L 175.073 210.809 L 175.073 290.487 Z" style="fill: none; visibility: hidden;"></path>
+      <path d="M 325.498 209.809 L 325.498 291.487 L 174.073 291.487 L 174.073 209.809 L 325.498 209.809 Z M 175.073 290.487 L 324.498 290.487 L 324.498 210.809 L 175.073 210.809 L 175.073 290.487 Z" style="fill: none; visibility: hidden;"></path>
+    </g>
+  </g>
+  <g transform="matrix(0.591974, 0, 0, 0.591974, 530.909668, 2.284577)" style="visibility: hidden;">
+    <rect x="0" width="59" height="36" style="fill: rgb(228, 23, 73);"></rect>
+    <rect x="59" width="59" height="36" style="fill: rgb(245, 88, 123);"></rect>
+    <rect x="118" width="59" height="36" style="fill: rgb(255, 138, 92);"></rect>
+    <rect x="177" width="59" height="36" style="fill: rgb(255, 245, 145);"></rect>
+  </g>
+  <g style="visibility: hidden;">
+    <title>Guide-2</title>
+    <path d="M 412.133 104 L 211.059 305.687 L 115 209.197 L 211.265 305.558 L 412.133 104 Z" style="stroke-linejoin: round; stroke: rgb(0, 255, 26); fill: none; stroke-opacity: 0.76;"></path>
+    <path d="M 57.2 500 L 500 60 L 57.2 500 Z" style="fill: rgb(216, 216, 216); stroke: rgb(0, 255, 98); stroke-opacity: 0.5;"></path>
+    <path d="M 0 473 L 475 0 L 0 473 Z" style="fill: rgb(216, 216, 216); stroke: rgb(0, 255, 98); stroke-opacity: 0.5;"></path>
+  </g>
+</svg>
