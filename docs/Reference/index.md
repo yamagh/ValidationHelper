@@ -119,26 +119,26 @@ Note: This action is experimental
 ![](../img/Reference/InputParameter-1.png) Object `Object` (Mandatory)
 : Specify the object for which you want to get a name.
 
-    ```js
-    Examples:
-    ToObject(GetFooById.List.Current.Foo.Bar)
-    # Output = bar
-    
-    ToObject(GetFooById.List.Current.Foo)
-    # Output = foo
-    
-    ToObject(GetFooById.List.Current)
-    # Output = Current
-    
-    ToObject(GetFooById.List[1])
-    # Output = List[1]
-    
-    ToObject(Foo.Bar)
-    # Output = bar
-    
-    ToObject(Foo)
-    # Output = foo
-    ```
+```js
+Examples:
+ToObject(GetFooById.List.Current.Foo.Bar)
+# Output = bar
+
+ToObject(GetFooById.List.Current.Foo)
+# Output = foo
+
+ToObject(GetFooById.List.Current)
+# Output = Current
+
+ToObject(GetFooById.List[1])
+# Output = List[1]
+
+ToObject(Foo.Bar)
+# Output = bar
+
+ToObject(Foo)
+# Output = foo
+```
 
 ![](../img/Reference/OutputParameter-0.png) Text `Name`
 : Object Name
