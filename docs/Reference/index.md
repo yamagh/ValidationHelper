@@ -6,14 +6,14 @@ Validate entity based on Validation Rules.
 
 #### Parameters
 
-![](/docs/img/Reference/InputParameter-1.png) Object `EntityObject` (Mandatory)
+![](../img/Reference/InputParameter-1.png) Object `EntityObject` (Mandatory)
 : Specify the Entity object to be validated. To specify an Entity object, use the `ToObject` function.
 Example: `ToObject(GetFooById.List.Current.Foo)`
 
-![](/docs/img/Reference/InputParameter-1.png) Boolean `IsOccurException` (Mandatory)
+![](../img/Reference/InputParameter-1.png) Boolean `IsOccurException` (Mandatory)
 : If True, an exception is raised if the validation does not pass.
 
-![](/docs/img/Reference/InputParameter-1.png) Structure `ErrorFormat`
+![](../img/Reference/InputParameter-1.png) Structure `ErrorFormat`
 : Format of the error message if `IsOccurException` is True and the validation did not pass.
 
   **Text `Prefix`**
@@ -45,10 +45,10 @@ Example: `ToObject(GetFooById.List.Current.Foo)`
     - Suffix error messages.
     - Default Value: `"</ul>"`
 
-![](/docs/img/Reference/OutputParameter-0.png) Boolean `IsValid`
+![](../img/Reference/OutputParameter-0.png) Boolean `IsValid`
 : True if validation is passed.
 
-![](/docs/img/Reference/OutputParameter-0.png) List `ErrorList (AttrName, Message)`
+![](../img/Reference/OutputParameter-0.png) List `ErrorList (AttrName, Message)`
 : If the validation did not pass, a list of details of the error. With an error message for each attribute.
 
 ### ![](/icon/action-server-32x32.png) HasError
@@ -57,13 +57,13 @@ Returns the error message for the specified attribute in ErrorList (`IsValidEnti
 
 #### Parameters
 
-![](/docs/img/Reference/InputParameter-1.png) Structure `ErrorList (AttrName, Message)` (Mandatory)
+![](../img/Reference/InputParameter-1.png) Structure `ErrorList (AttrName, Message)` (Mandatory)
 : `IsValidEntity` Action's output.
 
-![](/docs/img/Reference/InputParameter-1.png) Structure `AttrName` (Mandatory)
+![](../img/Reference/InputParameter-1.png) Structure `AttrName` (Mandatory)
 : Attribute name to be retrieved from ErrorList. Ignore case.
 
-![](/docs/img/Reference/OutputParameter-0.png) Structure `Out (IsValid, Message)`
+![](../img/Reference/OutputParameter-0.png) Structure `Out (IsValid, Message)`
 : `IsValid` is False if `AttrName` is in `ErrorList`.
 
 ## Client Actions
@@ -74,24 +74,24 @@ Validate entity based on Validation Rules.
 
 #### Parameters
 
-![](/docs/img/Reference/InputParameter-1.png) Object `EntityObject` (Mandatory)
+![](../img/Reference/InputParameter-1.png) Object `EntityObject` (Mandatory)
 : See `IsValidEntity` in Server Action
 
-![](/docs/img/Reference/InputParameter-1.png) Boolean `IsOccurException` (Mandatory)
+![](../img/Reference/InputParameter-1.png) Boolean `IsOccurException` (Mandatory)
 : See `IsValidEntity` in Server Action
 
-![](/docs/img/Reference/InputParameter-1.png) Structure `ErrorFormat`
+![](../img/Reference/InputParameter-1.png) Structure `ErrorFormat`
 : See `IsValidEntity` in Server Action
 
-![](/docs/img/Reference/InputParameter-1.png) Integer `CacheInMinutes`
+![](../img/Reference/InputParameter-1.png) Integer `CacheInMinutes`
 : Time to cache the validation rules. If the cache becomes invalid, the validation rule is re-fetched from the server.
 
   - Default Value: 1440
 
-![](/docs/img/Reference/OutputParameter-0.png) Boolean `IsValid`
+![](../img/Reference/OutputParameter-0.png) Boolean `IsValid`
 : See `IsValidEntity` in Server Action
 
-![](/docs/img/Reference/OutputParameter-0.png) List `ErrorList (AttrName, Message)`
+![](../img/Reference/OutputParameter-0.png) List `ErrorList (AttrName, Message)`
 : See `IsValidEntity` in Server Action
 
 ### ![](/icon/action-client-32x32.png) HasError
@@ -100,13 +100,13 @@ Returns the error message for the specified attribute in ErrorList (`IsValidEnti
 
 #### Parameters
 
-![](/docs/img/Reference/InputParameter-1.png) Structure `ErrorList (AttrName, Message)` (Mandatory)
+![](../img/Reference/InputParameter-1.png) Structure `ErrorList (AttrName, Message)` (Mandatory)
 : See `HasError` in Server Action
 
-![](/docs/img/Reference/InputParameter-1.png) Text `AttrName` (Mandatory)
+![](../img/Reference/InputParameter-1.png) Text `AttrName` (Mandatory)
 : Attribute name to be retrieved from ErrorList. Ignore case. If you do not want to hardcode attribute names, you can use the `NameOf` action.
 
-![](/docs/img/Reference/OutputParameter-0.png) Structure `Out (IsValid, Message)`
+![](../img/Reference/OutputParameter-0.png) Structure `Out (IsValid, Message)`
 : See `HasError` in Server Action
 
 ### ![](/icon/action-client-32x32.png) NameOf
@@ -116,7 +116,7 @@ Note: This action is experimental
 
 #### Parameters
 
-![](/docs/img/Reference/InputParameter-1.png) Object `Object` (Mandatory)
+![](../img/Reference/InputParameter-1.png) Object `Object` (Mandatory)
 : Specify the object for which you want to get a name.
 
     ```js
@@ -140,69 +140,69 @@ Note: This action is experimental
     # Output = foo
     ```
 
-![](/docs/img/Reference/OutputParameter-0.png) Text `Name`
+![](../img/Reference/OutputParameter-0.png) Text `Name`
 : Object Name
 
-### ![](/docs/img/Reference/ClientAction16.png) Message
+### ![](../img/Reference/ClientAction16.png) Message
 
 Wrapper for [FeedbackMessage](https://success.outsystems.com/Documentation/11/Reference/OutSystems_APIs/JavaScript_API/FeedbackMessage?_gl=1*136xofe*_ga*MTQwNDI0MjEwNC4xNjY0MDcwODQz*_ga_ZD4DTMHWR2*MTY2NTQxMjUzOC4zOS4xLjE2NjU0MTI1NDAuNTguMC4w) API in OutSystems' standard JavaScript API. The error message returned by default by the `IsValidEntity` action contains HTML `<br>` and `<ul>` tags, but you must use this `Message` action with the input parameter `encodeHTML` set to False in order to correctly display this error message in your feedback message.
 
 #### Parameters
 
-![](/docs/img/Reference/InputParameter-1.png) Text `message` (Mandatory)
-![](/docs/img/Reference/InputParameter-1.png) Text `messageType` (Mandatory)
-![](/docs/img/Reference/InputParameter-1.png) Text `encodeHTML` (Mandatory)
-![](/docs/img/Reference/InputParameter-1.png) Text `extraCssClasses` (Mandatory)
-![](/docs/img/Reference/InputParameter-1.png) Text `closeOnClick` (Mandatory)
-![](/docs/img/Reference/InputParameter-1.png) Text `onClick` (Mandatory)
+![](../img/Reference/InputParameter-1.png) Text `message` (Mandatory)
+![](../img/Reference/InputParameter-1.png) Text `messageType` (Mandatory)
+![](../img/Reference/InputParameter-1.png) Text `encodeHTML` (Mandatory)
+![](../img/Reference/InputParameter-1.png) Text `extraCssClasses` (Mandatory)
+![](../img/Reference/InputParameter-1.png) Text `closeOnClick` (Mandatory)
+![](../img/Reference/InputParameter-1.png) Text `onClick` (Mandatory)
 
-### ![](/docs/img/Reference/MessageError16.png) Message_Error
+### ![](../img/Reference/MessageError16.png) Message_Error
 
 Shortcut for error messages.
 
 #### Parameters
 
-![](/docs/img/Reference/InputParameter-1.png) Text `message` (Mandatory)
-![](/docs/img/Reference/InputParameter-1.png) Text `encodeHTML` (Mandatory)
-![](/docs/img/Reference/InputParameter-1.png) Text `extraCssClasses` (Mandatory)
-![](/docs/img/Reference/InputParameter-1.png) Text `closeOnClick` (Mandatory)
-![](/docs/img/Reference/InputParameter-1.png) Text `onClick` (Mandatory)
+![](../img/Reference/InputParameter-1.png) Text `message` (Mandatory)
+![](../img/Reference/InputParameter-1.png) Text `encodeHTML` (Mandatory)
+![](../img/Reference/InputParameter-1.png) Text `extraCssClasses` (Mandatory)
+![](../img/Reference/InputParameter-1.png) Text `closeOnClick` (Mandatory)
+![](../img/Reference/InputParameter-1.png) Text `onClick` (Mandatory)
 
-### ![](/docs/img/Reference/MessageInfo16.png) Message_Info
+### ![](../img/Reference/MessageInfo16.png) Message_Info
 
 Shortcut for info messages.
 
 #### Parameters
 
-![](/docs/img/Reference/InputParameter-1.png) Text `message` (Mandatory)
-![](/docs/img/Reference/InputParameter-1.png) Text `encodeHTML` (Mandatory)
-![](/docs/img/Reference/InputParameter-1.png) Text `extraCssClasses` (Mandatory)
-![](/docs/img/Reference/InputParameter-1.png) Text `closeOnClick` (Mandatory)
-![](/docs/img/Reference/InputParameter-1.png) Text `onClick` (Mandatory)
+![](../img/Reference/InputParameter-1.png) Text `message` (Mandatory)
+![](../img/Reference/InputParameter-1.png) Text `encodeHTML` (Mandatory)
+![](../img/Reference/InputParameter-1.png) Text `extraCssClasses` (Mandatory)
+![](../img/Reference/InputParameter-1.png) Text `closeOnClick` (Mandatory)
+![](../img/Reference/InputParameter-1.png) Text `onClick` (Mandatory)
 
-### ![](/docs/img/Reference/MessageSuccess16.png) Message_Success
+### ![](../img/Reference/MessageSuccess16.png) Message_Success
 
 Shortcut for success messages.
 
 #### Parameters
 
-![](/docs/img/Reference/InputParameter-1.png) Text `message` (Mandatory)
-![](/docs/img/Reference/InputParameter-1.png) Text `encodeHTML` (Mandatory)
-![](/docs/img/Reference/InputParameter-1.png) Text `extraCssClasses` (Mandatory)
-![](/docs/img/Reference/InputParameter-1.png) Text `closeOnClick` (Mandatory)
-![](/docs/img/Reference/InputParameter-1.png) Text `onClick` (Mandatory)
+![](../img/Reference/InputParameter-1.png) Text `message` (Mandatory)
+![](../img/Reference/InputParameter-1.png) Text `encodeHTML` (Mandatory)
+![](../img/Reference/InputParameter-1.png) Text `extraCssClasses` (Mandatory)
+![](../img/Reference/InputParameter-1.png) Text `closeOnClick` (Mandatory)
+![](../img/Reference/InputParameter-1.png) Text `onClick` (Mandatory)
 
-### ![](/docs/img/Reference/MessageWarning16.png) Message_Warning
+### ![](../img/Reference/MessageWarning16.png) Message_Warning
 
 Shortcut for warning messages.
 
 #### Parameters
 
-![](/docs/img/Reference/InputParameter-1.png) Text `message` (Mandatory)
-![](/docs/img/Reference/InputParameter-1.png) Text `encodeHTML` (Mandatory)
-![](/docs/img/Reference/InputParameter-1.png) Text `extraCssClasses` (Mandatory)
-![](/docs/img/Reference/InputParameter-1.png) Text `closeOnClick` (Mandatory)
-![](/docs/img/Reference/InputParameter-1.png) Text `onClick` (Mandatory)
+![](../img/Reference/InputParameter-1.png) Text `message` (Mandatory)
+![](../img/Reference/InputParameter-1.png) Text `encodeHTML` (Mandatory)
+![](../img/Reference/InputParameter-1.png) Text `extraCssClasses` (Mandatory)
+![](../img/Reference/InputParameter-1.png) Text `closeOnClick` (Mandatory)
+![](../img/Reference/InputParameter-1.png) Text `onClick` (Mandatory)
 
 ## Validation Types
 
