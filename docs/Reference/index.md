@@ -1,6 +1,6 @@
 ## Server Actions
 
-### ![](/icon/action-server-32x32.png) IsValidEntity
+### ![](../img/Reference/action-server-32x32.png) IsValidEntity
 
 Validate entity based on Validation Rules.
 
@@ -51,7 +51,7 @@ Example: `ToObject(GetFooById.List.Current.Foo)`
 ![](../img/Reference/OutputParameter-0.png) List `ErrorList (AttrName, Message)`
 : If the validation did not pass, a list of details of the error. With an error message for each attribute.
 
-### ![](/icon/action-server-32x32.png) HasError
+### ![](../img/Reference/action-server-32x32.png) HasError
 
 Returns the error message for the specified attribute in ErrorList (`IsValidEntity` Action's output).
 
@@ -68,7 +68,7 @@ Returns the error message for the specified attribute in ErrorList (`IsValidEnti
 
 ## Client Actions
 
-### ![](/icon/action-client-32x32.png) IsValidEntity
+### ![](../img/Reference/action-client-32x32.png) IsValidEntity
 
 Validate entity based on Validation Rules.
 
@@ -94,7 +94,7 @@ Validate entity based on Validation Rules.
 ![](../img/Reference/OutputParameter-0.png) List `ErrorList (AttrName, Message)`
 : See `IsValidEntity` in Server Action
 
-### ![](/icon/action-client-32x32.png) HasError
+### ![](../img/Reference/action-client-32x32.png) HasError
 
 Returns the error message for the specified attribute in ErrorList (`IsValidEntity` Action's output).
 
@@ -109,7 +109,7 @@ Returns the error message for the specified attribute in ErrorList (`IsValidEnti
 ![](../img/Reference/OutputParameter-0.png) Structure `Out (IsValid, Message)`
 : See `HasError` in Server Action
 
-### ![](/icon/action-client-32x32.png) NameOf
+### ![](../img/Reference/action-client-32x32.png) NameOf
 
 Get the name of the object.
 Note: This action is experimental
