@@ -3,104 +3,145 @@
 Hello, Thank you for opening this page.  
 This tutorial will show you how to use "ValidationHelper" through the simplest use case.
 
+Tutorial Steps:
+
+1. Create the app and entity for this tutorial
+2. Define validation rules in this app.
+3. Call verification action where you want to verify.
+
 ---
 
-There are two things to do.
+## 1. Create the app and entity for this tutorial
 
-1. Define validation rules in this app.
-2. Call validation action where you want to verify.
+The first step is to create an application for this tutorial. Then open the module and create the following Employee entity.
 
-For example, in a module called "OutSystemsSampleDataDB" there is an entity called "Sample_Employee". This entity has attributes such as "FirstName", "LastName", and "Email". In this tutorial, we will define validation rules for this entity and call the validation action to see how the validation is performed. 
+**Employee Entity**
 
-Do you have "OutSystemsSampleDataDB" in your environment? If not, install it from [Forge]((https://www.outsystems.com/forge/component-overview/4145/outsystems-sample-data)).
+![](../img/Tutorial/140/1.png){: loading=lazy }
 
-Are you ready? Let's get started.
+| Attribute Name | Data Type | Is AutoNumber | Length | Default Value |
+| :------------- | --------- | ------------- | ------ | ------------- |
+| Id             | Integer   | Yes           | -      |               |
+| FirstName      | Text      | -             | 50     |               |
+| LastName       | Text      | -             | 50     |               |
+| Email          | Email     | -             | 250    |               |
+| JobPosition    | Text      | -             | 50     |               |
+| IsActive       | Boolean   | -             | -      | True          |
 
-![](../img/Tutorial/130/1.png){: loading=lazy }
+Once the entity is created, publish it.
 
-## 1. Define validation rules in this app
+Then consider what validation we will do when we save to this entity. In this case, we will validate the following.
 
-First of all, open the ValidationHelper app (https://<YOUR_SERVER\>/ValidationHelper/).  
+| Attribute Name | Validation we want to do                                        |
+| :------------- | --------------------------------------------------------------- |
+| Id             |                                                                 |
+| FirstName      | Must have at least two letters.                                 |
+| LastName       | Must have at least two letters.                                 |
+| Email          | Must be in a valid form as an email address / Be unique         |
+| JobPosition    | Must contain one of the words "Developer," "Manager," or "CEO". |
+| IsActive       |                                                                 |
+
+## 2. Define validation rules in this app
+
+Open the ValidationHelper app (https://<YOUR_SERVER\>/ValidationHelper/).  
 Then, the entity search screen is displayed, so search for the entity for which you want to define validation rules.
 
-In this case, we want to define a validation rule for the "Sample_Employee" entity, so we search for "Sample_Employee" and click on it.
+In this case, we want to define a validation rule for the "Employee" entity in the "Tutorial" application, so we search for it in the "Tutorial" application and click on "Employee".
 
-![](../img/Tutorial/130/2.png){: loading=lazy }
+![](../img/Tutorial/140/2.png){: loading=lazy }
 
-Once the detail screen opens, define the following validation rules
+After opening the detail screen, we will define a validation rule for each attribute. Set them up as shown in the table below. Do not forget to press the "Save" button at the end.
 
-1. `FirstName` and `LastName` must be at least 2 characters
-2. `Email` must be in the regular expression format `[a-zA-Z0-9.]@mydomain.com`.
+| Attribute Name | Validation Rule Type | Rule Type | Value                       |
+| :------------- | -------------------- | --------- | --------------------------- |
+| FirstName      | Length RUle          | min       | 2                           |
+| LastName       | Length RUle          | min       | 2                           |
+| Email          | Format Rule          | with      | [0-9a-zA-Z.]+@mycompany.com |
+| Email          | Uniqueness Rule      | -         | IsActive                    |
+| JobPosition    | Element Rule         | inclusion | "Developer Manager CEO"     |
 
-The validation rule definition is complete when you click the Save button with the settings as shown in the following image.
+![](../img/Tutorial/140/3.png){: loading=lazy }
 
-![](../img/Tutorial/130/3.png){: loading=lazy }
-![](../img/Tutorial/130/4.png){: loading=lazy }
+## 3. Call verification action where you want to verify
 
-## 2. Call validation action where you want to verify
+Return to ServiceStudio and add a references to ValidationHelper in the Tutorial app.
 
-Start Service Studio and create a tutorial app and open the module.
-Then add references to "Sample_Employee" and "ValidationHelper" to your app.
+![](../img/Tutorial/140/4.png){: loading=lazy }
 
-![](../img/Tutorial/130/5.png){: loading=lazy }
-![](../img/Tutorial/130/6.png){: loading=lazy }
+Next, create a screen using ServiceStudio's scaffolding function.
 
-Next, create a screen using ServiceStudio's scaffolding function. The screen is slightly customized with only four input fields: FirstName, LastName, BirthDate, and Email.
+![](../img/Tutorial/140/5.png){: loading=lazy }
 
-![](../img/Tutorial/130/7.png){: loading=lazy }
+Next, add validation to the save button process. The `SaveDetail` action before adding the process looks like this.
 
-Next, add validation to the save button process. The `SaveDetail` action before adding the process looks like this
+![](../img/Tutorial/140/6.png){: loading=lazy }
 
-![](../img/Tutorial/130/8.png){: loading=lazy }
+Add the process as shown in the image below. The `IsValidEntity` action is an action in the "ValidationHelper" module. Set the parameters as follows.
 
-Since there is a built-in validation, add an `IsValidEntity` action next to it.  The `IsValidEntity` action takes an entity object and validates it according to the rules you just set.
+- EntityObject: `ToObject(GetEmployeeById.List.Current.Employee)`
+- IsOccurException: `True`
 
-Set the input parameters as follows
+If `IsOccurException` is set to `True`, an exception will be thrown if the validation does not pass. Therefore, add an ExceptionHandler to add processing to display the error message. Use `Message_Warning` in the ValidationHelper module to display error messages.
 
-- EntityObject: `ToObject(GetEmployeeById.List.Current.Sample_Employee)`
-- IsOccurException: False
+![](../img/Tutorial/140/7.png){: loading=lazy }
 
-![](../img/Tutorial/130/9.png){: loading=lazy }
+After this stage of implementation is complete, publish the file. Then, let's run it.
 
-The `IsValidEntity` action has the following outputs
+When I opened the screen and clicked the save button, error messages appeared. It is working as per the validation rules we defined. You can also customize error messages, which are not covered in this tutorial.
 
-- IsValid: True if all validations pass, False otherwise
-- ErrorList
-  - AttrName: The name of the item that did not pass the validation.
-  - MessageName: Error message
+![](../img/Tutorial/140/9.png){: loading=lazy }
 
-Then, add a process to determine if there are any errors and save the data if there are no errors. 
-If an error occurs, set the `WidgetName.IsValid` and `WidgetName.ErrorMessage` values to the widget on each screen as follows.
+Next, enter the content that does not cause error messages and click the Save button.
+
+![](../img/Tutorial/140/10.png){: loading=lazy }
+
+Saved successfully without error. Then, it moved to the list screen.
+
+![](../img/Tutorial/140/11.png){: loading=lazy }
+
+The error messages was displayed as a feedback message, but we would like to change it to be displayed under each widget.
+
+First, change `IsOccurException` to False in the `IsValidEntity` action. Then add a process to set an error message to each widget in case of a validation error, as shown in the image below.
 
 ```js
+// Examples:
 Input_FirstName.Valid
   = HasError(IsValidEntity.ErrorList, "FirstName").IsValid
 Input_FirstName.ValidationMessage
   = HasError(IsValidEntity.ErrorList, "FirstName").ErrorMessage
 ```
 
-The `HasError` action used here is a convenience for retrieving error messages for any attribute from the `ErrorList`.
+![](../img/Tutorial/140/13.png){: loading=lazy }
 
-![](../img/Tutorial/130/10.png){: loading=lazy }
+When you have finished modifying the implementation, publish and run it. You should see error messages under each widget.
 
-That's all for how to use it.  
-Let's check the execution result.
+![](../img/Tutorial/140/14.png){: loading=lazy }
 
-## Execution Result
+The `IsValidEntity` we have used so far has two actions, one for the client side and one for the server side.
+The client-side action uses only on-screen data for validation. On the other hand, server-side actions can also validate using off-screen data.
+For example, in the case of uniqueness verification, all records in the database are referenced to ensure that the data being stored is unique.
+Since the implementation up to this point has used client-side actions, the next step is to use server-side actions.
 
-Open the screen you just created in your browser and browse to the appropriate employee. Then, to see how the validation works, change FirstName and LastName to just one character and click the Save button.
+Let's add processing in the `EmployeeCreateOrUpdate` action!
 
-![](../img/Tutorial/130/11.png){: loading=lazy }
+![](../img/Tutorial/140/15.png){: loading=lazy }
 
-The following error message is displayed to confirm that the validation is working as defined.
+Add `IsValidEntity` for server side in the `EmployeeCreateOrUpdate` action. Set the parameters as follows.
 
-![](../img/Tutorial/130/12.png){: loading=lazy }
+- EntityObject: `ToObject(Source)`
+- IsOccurException: `True`
 
-Change the condition to one that does not result in an error and press the Save button. The error message is resolved and the file is saved correctly.
+![](../img/Tutorial/140/16.png){: loading=lazy }
 
-![](../img/Tutorial/130/13.png){: loading=lazy }
+After implementation is complete, publish and run the application.
+
+A new save is performed by specifying the same e-mail address as the one just registered. The correct error message is displayed.
+
+![](../img/Tutorial/140/17.png){: loading=lazy }
 
 ---
 
-That's all for the tutorial.  
-While this tutorial has covered validation of the length of the input string and formatting using regular expressions, there are other validations that can be used. See [Reference](/Reference) for more information.
+That's all for this tutorial!
+
+Using the ValidationHelper, we were able to define validation rules declaratively and implement them concisely.
+In addition to the validation rules presented in this tutorial, there are other validations that can be used. See [Reference](/Reference) for more information.
