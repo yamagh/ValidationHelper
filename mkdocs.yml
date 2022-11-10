@@ -26,6 +26,8 @@ markdown_extensions:
       permalink: true
   - pymdownx.tasklist:
       custom_checkbox: true
+extra_css:
+  - stylesheets/extra.css
 nav:
   - Home: index.md
   - Getting started:
