@@ -144,4 +144,4 @@ A new save is performed by specifying the same e-mail address as the one just re
 That's all for this tutorial!
 
 Using the ValidationHelper, we were able to define validation rules declaratively and implement them concisely.
-In addition to the validation rules presented in this tutorial, there are other validations that can be used. See [Reference](/ValidationHelper/Reference/#validation-types) for more information.
+In addition to the validation rules presented in this tutorial, there are other validations that can be used. See [Reference](/ValidationHelper/Reference/validation-types/) for more information.
